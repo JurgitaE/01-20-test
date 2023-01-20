@@ -270,4 +270,11 @@ h3 {
     .footer-section {
         justify-content: space-around;
     }
+    .header-section,
+    .hero-section,
+    .main-content,
+    .footer-section {
+        padding-right: 300px;
+        padding-left: 300px;
+    }
 }
