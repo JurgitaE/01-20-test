@@ -9,6 +9,14 @@ body * {
     font-family: 'Work Sans', sans-serif;
 }
 
+h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
 /* Header */
 .header-section,
 .hero-section,
@@ -18,15 +26,30 @@ body * {
     color: white;
     width: 100%;
 }
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+}
 
 .main-title {
     font-size: 30px;
-    line-height: 37.5px;
+    line-height: 1.25;
+    font-weight: 500;
     display: inline-block;
 }
-
-.logo-container.logo {
-    display: inline-block;
+.logo-container {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+.header-section .logo {
+    width: 50px;
+    padding-right: 10px;
+}
+.header-section .logo:hover {
+    transform: scale(110%);
 }
 .header-section .hamburger:hover {
     cursor: pointer;
@@ -44,21 +67,29 @@ body * {
     color: white;
     font-size: 20px;
     line-height: 1.25;
-    text-align: center;
+    font-weight: 400;
 }
 
-.header-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header-section .logo {
-    width: 50px;
-}
 .header-section .hamburger {
     width: 24px;
     height: 20px;
 }
+/* hero section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+}
+.hero-section img {
+    width: 100%;
+    align-self: center;
+    max-width: 640px;
+}
+.hero-section .main-text {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* main-content */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -74,7 +105,7 @@ body * {
 .main-content img {
     max-width: 200px;
 }
-
+/* footer-section */
 .footer-section a > img {
     height: 18px;
 }
@@ -84,12 +115,16 @@ body * {
     .footer-section {
         padding: 30px 50px;
     }
+    .header-section {
+        padding-bottom: 40px;
+    }
     .main-title {
         font-size: 40px;
         line-height: 1.25;
     }
     .header-section .logo {
         width: 70px;
+        padding-right: 18px;
     }
     .header-section .hamburger {
         display: none;
@@ -103,6 +138,18 @@ body * {
         flex-direction: row;
         align-items: baseline;
         flex-wrap: wrap;
+    }
+
+    .hero-section {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .hero-section img {
+        width: 50%;
+        align-self: center;
+    }
+    .hero-section .main-text {
+        width: 40%;
     }
 }
 
