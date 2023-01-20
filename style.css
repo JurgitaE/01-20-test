@@ -267,9 +267,6 @@ h3 {
 }
 
 @media (min-width: 1500px) {
-    .hero-section {
-        justify-content: center;
-    }
     .footer-section {
         justify-content: space-around;
     }
